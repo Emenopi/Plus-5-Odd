@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lilita+One&family=Montserrat&family=Playfair+Display:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .h1 {
+      @apply text-2xl font-bold font-playfair text-center;
+    }
+
+    .h2 {
+      @apply text-lg font-bold font-playfair p-10;
+    }
+
+    .moduleLearn {
+        @apply lg:col-span-1 lg:min-h-[17vh] bg-gradient-to-r from-[#00efaf] to-[#20b8b3] border border-l-zinc-900 border-l-2 p-4 rounded-lg;
+      }
+
+      .moduleBasic {
+        @apply lg:col-span-1 m-2 lg:min-h-[20vh] bg-gradient-to-r from-[#00efaf] to-[#20b8b3] border border-l-zinc-900 border-l-2 p-4 rounded-lg;
+      }
+
+    .moduleGrid-learn {
+        @apply grid lg:grid-cols-3 gap-4 p-4 pt-2 pb-6;
+    }
+    .moduleTitle {
+        @apply text-sm font-playfair font-semibold;
+    }
+    .moduleText {
+        @apply text-sm font-lato text-zinc-800 pt-5;
+    }
+
+    .modalHeader {
+        @apply bg-purple-400 -m-9 rounded-lg h-20 text-center;
+    }
+  }
+
+  @layer utilities {
+    .radial {
+      background-image: radial-gradient(circle,
+      #464662 10%,
+      #464662 20%,
+      #3a3e57 20%,
+      #3a3e57 30%,
+      #2c2c48 30%,
+      #2c2c48 40%,
+      #21213a 40%,
+      #21213a 50%,
+      #18182d 50%,
+      #18182d 60%,
+      #121221 60%,
+      #121221 70%,
+      #0e0d15 70%,
+      #0e0d15 100%
+      )
+    }
+
+    .circle-effect {
+      width: 50vw;
+      height: 22vw;
+      border: 5px solid #ffffff;
+      border-radius: 50%;
+    }
+
+    .speech-bubble {
+      background: #14b8a6;
+    }
+
+    .speech-bubble:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 20%;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-top-color: #14b8a6;
+      border-bottom: 0;
+      border-right: 0;
+      border-left: -10px;
+      margin-bottom: -20px;
+    }
+
+    @keyframes roll-in {
+      0% {transform: translateY(-50%); opacity: 0}
+      100% {transform: none}
+    }
+
+    .roll {
+      animation: roll-in 1.5s;
+    }
+  }
+
+  
